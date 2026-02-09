@@ -475,7 +475,11 @@ bool handleSlash(){
                 return true;
             }
             case 'P': {
-                ShellExecuteA(NULL, "open", "powershell.exe", NULL, NULL, SW_SHOWNORMAL);
+                ShellExecuteA(NULL, "open", "powershell.exe", NULL, "C:\\Users\\idk\\Code", SW_SHOWNORMAL);
+                return true;
+            }
+            case 'L': {
+                ShellExecuteA(NULL, "open", "wsl.exe", "--cd ~/files", NULL, SW_SHOWNORMAL);
                 return true;
             }
         }
