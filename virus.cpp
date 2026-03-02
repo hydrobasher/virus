@@ -53,6 +53,8 @@ DWORD macroStartTime = 0;
 
 bool slashPressed = false;
 
+std::string fullscreen = "--kiosk ";
+
 struct Sound {
     std::vector<BYTE> audioData;
     WAVEFORMATEX wfx;
@@ -443,35 +445,35 @@ bool handleSlash(){
                 return true;
             } 
             case 'C': {
-                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Profile 1\" https://clickup.up.ac.za", NULL, SW_SHOWNORMAL);
+                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Profile 1\" --kiosk https://clickup.up.ac.za", NULL, SW_SHOWMAXIMIZED);
                 return true;
             }
             case 'F': {
-                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Profile 1\" https://ff.cs.up.ac.za/modules/", NULL, SW_SHOWNORMAL);
+                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Profile 1\" --kiosk https://ff.cs.up.ac.za/modules/", NULL, SW_SHOWMAXIMIZED);
                 return true;
             }
             case 'B': {
-                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Default\" https://www.google.com", NULL, SW_SHOWNORMAL);
+                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Default\" --kiosk https://www.google.com", NULL, SW_SHOWMAXIMIZED);
                 return true;
             }
             case 'G': {
-                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Default\" https://gemini.google.com/", NULL, SW_SHOWNORMAL);
+                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Default\" --kiosk https://gemini.google.com/", NULL, SW_SHOWMAXIMIZED);
                 return true;
             }
             case 'D': {
-                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Default\" https://discord.com/channels/@me", NULL, SW_SHOWNORMAL);
+                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Default\" --kiosk https://discord.com/channels/@me", NULL, SW_SHOWMAXIMIZED);
                 return true;
             }
             case 'W': {
-                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Default\" https://web.whatsapp.com/", NULL, SW_SHOWNORMAL);
+                ShellExecuteA(NULL, "open", "chrome.exe", "--profile-directory=\"Default\" --kiosk https://web.whatsapp.com/", NULL, SW_SHOWMAXIMIZED);
                 return true;
             }
             case 'V': {
-                ShellExecuteA(NULL, "open", "C:/Users/luanr/AppData/Local/Programs/Microsoft VS Code/Code.exe", NULL, NULL, SW_SHOWNORMAL);
+                ShellExecuteA(NULL, "open", "C:/Users/luanr/AppData/Local/Programs/Microsoft VS Code/Code.exe", NULL, NULL, SW_SHOWMAXIMIZED);
                 return true;
             }
             case 'E': {
-                ShellExecuteA(NULL, "open", "explorer.exe", "C:\\Users\\idk", NULL, SW_SHOWNORMAL);
+                ShellExecuteA(NULL, "open", "explorer.exe", "C:\\Users\\idk", NULL, SW_SHOWMAXIMIZED);
                 return true;
             }
             case 'P': {
