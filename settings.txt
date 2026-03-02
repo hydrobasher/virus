@@ -3,4 +3,4 @@ volume: 1
 keyPressSound: true
 keyReleaseSound: true
 keyboardMode: false
-palette: turquoise
+palette: topre

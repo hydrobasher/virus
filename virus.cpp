@@ -503,7 +503,7 @@ bool CheckCombo(){
 
         switch (key){
             case VK_OEM_3: {
-                KeyCombo({VK_LCONTROL, VK_LSHIFT, VK_OEM_3});
+                KeyCombo({VK_MENU, VK_F4});
                 return true;
             }
             case 'C':{
@@ -553,6 +553,12 @@ bool CheckCombo(){
             }
             case VK_OEM_2: {
                 if (handleSlash()) return true;
+                break;
+            }
+            case 'Z': {
+                KeyCombo({VK_LCONTROL, 'K'});
+                KeyClick('Z');
+                return true;
             }
         }
     }
